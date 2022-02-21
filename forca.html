@@ -6,29 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da forca</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body {
-            background-color: white;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .letras-erradas {
+            font-size: 18px;
+        }
+
+        .partes-corpo{
+            display: none;
         }
     </style>
 </head>
 <body>
-    <svg height="250" width="200" class="forca">
-        <!-- Forca desenho -->
-        <line x1="58" y1="20" x2="140" y2="20" stroke="black" stroke-width="4"/>
-        <line x1="140" y1="18" x2="140" y2="50"stroke="black" stroke-width="4"/>
-        <line x1="60" y1="20" x2="60" y2="230" stroke="black" stroke-width="4"/>
-        <line x1="18" y1="230" x2="100" y2="230" stroke="black" stroke-width="4"/>
+    <header>
+        <h1>Jogo da forca</h1>
+        <h2>Tente advinhar a palavra</h2>
+    </header>
+    <main>
+        <div class="forca-conatiner">
+            <svg height="250" width="200" class="forca">
+                <!-- Forca desenho -->
+                <line x1="58" y1="20" x2="140" y2="20" stroke="black" stroke-width="4"/>
+                <line x1="140" y1="18" x2="140" y2="50"stroke="black" stroke-width="4"/>
+                <line x1="60" y1="20" x2="60" y2="230" stroke="black" stroke-width="4"/>
+                <line x1="18" y1="230" x2="100" y2="230" stroke="black" stroke-width="4"/>
+                <!-- Cabecaça -->
+                <circle cx="140" cy="70" r="20" stroke="black" stroke-width="4" class="partes-corpo" fill="white"/>
+                <!-- Corpo -->
+                <line x1="140" y1="90" x2="140" y2="150" stroke="black" stroke-width="4" class="partes-corpo"/>
+                <!-- Braços -->
+                <line x1="140" y1="120" x2="120" y2="100" stroke="black" stroke-width="4" class="partes-corpo"/>
+                <line x1="140" y1="120" x2="160" y2="100" stroke="black" stroke-width="4" class="partes-corpo"/>
+                <!-- Pernas -->
+                <line x1="140" y1="150" x2="120" y2="180" stroke="black" stroke-width="4" class="partes-corpo"/>
+                <line x1="140" y1="150" x2="160" y2="180" stroke="black" stroke-width="4" class="partes-corpo"/>
+            </svg>
+        </div>
 
-        <!-- Cabecaça -->
-        <circle cx="140" cy="70" r="20" stroke="black" stroke-width="4" class="forca-parte" fill="white"/>
-        <!-- Corpo -->
-        <line x1="140" y1="90" x2="140" y2="150" stroke="black" stroke-width="4" class="forca-parte"/>
-        <!-- Braços -->
-        <line x1="140" y1="120" x2="120" y2="100" stroke="black" stroke-width="4" class="forca-parte"/>
-        <line x1="140" y1="120" x2="160" y2="100" stroke="black" stroke-width="4" class="forca-parte"/>
-        <!-- Pernas -->
-        <line x1="140" y1="150" x2="120" y2="180" stroke="black" stroke-width="4" class="forca-parte"/>
-        <line x1="140" y1="150" x2="160" y2="180" stroke="black" stroke-width="4" class="forca-parte"/>
-    </svg>
+        <div class="letras-erradas">
+            <h3>Letras erradas</h3>
+        </div>
+    </main>
 </body>
 </html>
