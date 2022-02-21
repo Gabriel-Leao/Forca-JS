@@ -41,11 +41,23 @@ document.addEventListener('keydown', (evento) =>{
             letras__erradas.push(letra)
             console.log(`lista de letras erradas ${letras__erradas}`)
         }
-    } else {
+    } else if (isnumber(ascii)){
         alert("Opção inválida! Tente novamente")
     }
+    atualizar__jogo()
 })
-console.log(palavra)
+
+function atualizar__jogo() {
+    mostrar__letras__erradas()
+}
+
+function mostrar__letras__erradas() {
+    const erradas = document.querySelector('.letras-erradas')
+    erradas.innerHTML = "<h3>Letras erradas</h3>"
+    letras__erradas.forEach(letra => {
+        erradas.innerHTML += `<span>${letra}</span>`
+    })
+}
 
 function letra__repetida() {
     const aviso = document.querySelector(".letra-repetida")
@@ -58,4 +70,9 @@ function letra__repetida() {
 function isletra(ascii) {
     const letra = ascii.charCodeAt(0)
     return letra>= 97 && letra <= 122
+}
+
+function isnumber(ascii) {
+    const letra = ascii.charCodeAt(0)
+    return letra>= 48 && letra <= 57
 }
