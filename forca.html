@@ -5,37 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da forca</title>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .jogo-container-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .letras-erradas {
-            font-size: 18px;
-        }
-
-        .partes-corpo{
-            display: none;
-        }
-
-        .letra-repetida {
-            display: none;
-        }
-
-        .popup-container {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -47,20 +17,20 @@
             <div class="forca-conatiner">
                 <svg height="250" width="200" class="forca">
                     <!-- Forca desenho -->
-                    <line x1="58" y1="20" x2="140" y2="20" stroke="black" stroke-width="4"/>
-                    <line x1="140" y1="18" x2="140" y2="50"stroke="black" stroke-width="4"/>
-                    <line x1="60" y1="20" x2="60" y2="230" stroke="black" stroke-width="4"/>
-                    <line x1="18" y1="230" x2="100" y2="230" stroke="black" stroke-width="4"/>
+                    <line x1="60" y1="20" x2="140" y2="20"/>
+                    <line x1="140" y1="20" x2="140" y2="50"/>
+                    <line x1="60" y1="20" x2="60" y2="230"/>
+                    <line x1="20" y1="230" x2="100" y2="230"/>
                     <!-- Cabecaça -->
-                    <circle cx="140" cy="70" r="20" stroke="black" stroke-width="4" class="partes-corpo" fill="white"/>
+                    <circle cx="140" cy="70" r="20" class="partes-corpo" fill="white"/>
                     <!-- Corpo -->
-                    <line x1="140" y1="90" x2="140" y2="150" stroke="black" stroke-width="4" class="partes-corpo"/>
+                    <line x1="140" y1="90" x2="140" y2="150" class="partes-corpo"/>
                     <!-- Braços -->
-                    <line x1="140" y1="120" x2="120" y2="100" stroke="black" stroke-width="4" class="partes-corpo"/>
-                    <line x1="140" y1="120" x2="160" y2="100" stroke="black" stroke-width="4" class="partes-corpo"/>
+                    <line x1="140" y1="120" x2="120" y2="100" class="partes-corpo"/>
+                    <line x1="140" y1="120" x2="160" y2="100" class="partes-corpo"/>
                     <!-- Pernas -->
-                    <line x1="140" y1="150" x2="120" y2="180" stroke="black" stroke-width="4" class="partes-corpo"/>
-                    <line x1="140" y1="150" x2="160" y2="180" stroke="black" stroke-width="4" class="partes-corpo"/>
+                    <line x1="140" y1="150" x2="120" y2="180" class="partes-corpo"/>
+                    <line x1="140" y1="150" x2="160" y2="180" class="partes-corpo"/>
                 </svg>
             </div>
 
@@ -72,7 +42,7 @@
         <div class="letras-certas"></div>
 
         <div class="letra-repetida">
-            <span>Vocẽ já usou está letra</span>
+            <p>Vocẽ já usou está letra</p>
         </div>
 
         <div class="popup-container">
@@ -82,7 +52,6 @@
             </div>
         </div>
     </main>
-
     <script src="forca.js"></script>
 </body>
 </html>
