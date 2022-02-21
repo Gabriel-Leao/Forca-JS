@@ -1,9 +1,9 @@
 const tecnologia = [
-    "python", "javascript", "java", "ruby", "swift", "node", "react", "linux", "pop os", "ubuntu", "fedora", "android", "windows", "mac os"
+    "python", "javascript", "java", "ruby", "swift", "node", "react", "linux", "popos", "ubuntu", "fedora", "android", "windows", "macos"
 ]
 
 const musica = [
-    "beatles", "nirvana", "black sabbath", "metallica", "ufo", "motorhead", "rainbow", "led zeppelin", "slayer", "anthrax", "misfits", "tupac", "eminem", "nwa",
+    "beatles", "nirvana", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "ledzeppelin", "slayer", "anthrax", "misfits", "tupac", "eminem", "nwa",
 ]
 
 let tema = ""
@@ -49,6 +49,7 @@ document.addEventListener('keydown', (evento) =>{
 
 function atualizar__jogo() {
     mostrar__letras__erradas()
+    mostrar__letras__corretas()
 }
 
 function mostrar__letras__erradas() {
@@ -58,6 +59,13 @@ function mostrar__letras__erradas() {
         erradas.innerHTML += `<span>${letra}</span>`
     })
 }
+
+function mostrar__letras__corretas() {
+    const certas = document.querySelector('.letras-certas')
+    const letrasseparadas = palavra.split("")
+    console.log(letrasteste)
+}
+
 
 function letra__repetida() {
     const aviso = document.querySelector(".letra-repetida")
