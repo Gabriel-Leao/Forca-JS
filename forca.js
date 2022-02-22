@@ -42,7 +42,7 @@ document.addEventListener('keydown', (evento) =>{
             console.log(`lista de letras erradas ${letras__erradas}`)
         }
     } else if (isnumber(ascii)){
-        alert("Opção inválida! Tente novamente")
+        numero()
     }
     atualizar__jogo()
 })
@@ -75,6 +75,14 @@ function mostrar__letras__corretas() {
 
 function letra__repetida() {
     const aviso = document.querySelector(".letra-repetida")
+    aviso.classList.add('show')
+    setTimeout(() => {
+        aviso.classList.remove('show')
+    }, 1000)
+}
+
+function numero() {
+    const aviso = document.querySelector(".numero")
     aviso.classList.add('show')
     setTimeout(() => {
         aviso.classList.remove('show')
