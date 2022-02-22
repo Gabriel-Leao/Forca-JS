@@ -1,9 +1,9 @@
 const tecnologia = [
-    "python", "javascript", "java", "ruby", "swift", "node", "react", "linux", "pop os", "ubuntu", "fedora", "android", "windows", "macos"
+    "python", "javascript", "java", "ruby", "swift", "node", "react", "linux", "popos", "ubuntu", "fedora", "android", "windows", "macos"
 ]
 
 const musica = [
-    "beatles", "nirvana", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "anthrax", "misfits", "ledzeppelin", "eminem", "nwa",
+    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "anthrax", "misfits", "ledzeppelin", "eminem", "nwa",
 ]
 
 let tema = ""
@@ -62,8 +62,14 @@ function mostrar__letras__erradas() {
 
 function mostrar__letras__corretas() {
     const certas = document.querySelector('.letras-certas')
-    const letras__separadas = palavra.split("")
-    console.log(letras__separadas)
+    certas.innerHTML = ""
+    const letras__separadas = palavra.split("").forEach(letra =>{
+        if (letras__corretas.includes(letra)) {
+            certas.innerHTML += `<span>${letra}</span>`
+        } else {
+            certas.innerHTML += `<span>_</span>`
+        }
+    })
 }
 
 
