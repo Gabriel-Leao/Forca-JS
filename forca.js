@@ -50,6 +50,7 @@ document.addEventListener('keydown', (evento) =>{
 function atualizar__jogo() {
     mostrar__letras__erradas()
     mostrar__letras__corretas()
+    desenhar__forca()
 }
 
 function mostrar__letras__erradas() {
@@ -70,6 +71,13 @@ function mostrar__letras__corretas() {
             certas.innerHTML += `<span>_</span>`
         }
     })
+}
+
+function desenhar__forca() {
+    const partes__corpo = document.querySelectorAll(".partes-corpo")
+    for(let i = 0; i < letras__erradas.length; i++) {
+        partes__corpo[i].style.display = "block"
+    }
 }
 
 
