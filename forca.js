@@ -51,6 +51,7 @@ function atualizar__jogo() {
     mostrar__letras__erradas()
     mostrar__letras__corretas()
     desenhar__forca()
+    checar__jogo()
 }
 
 function mostrar__letras__erradas() {
@@ -80,6 +81,23 @@ function desenhar__forca() {
     }
 }
 
+function checar__jogo() {
+    let mensagem = ""
+    const certas = document.querySelector('.letras-certas')
+    const partes__corpo = document.querySelectorAll(".partes-corpo")
+    if (letras__erradas.length === partes__corpo.length) {
+        mensagem = "Fim de jogo! Vocẽ perdeeu!"
+    } else if (palavra === certas.innerText) {
+        mensagem = "Parabéns! Você ganhou!"
+    } if (mensagem) {
+        document.querySelector('#mensagem').innerHTML = mensagem
+        document.querySelector('.popup-container').style.display = "flex"
+    }
+}
+
+function reiniciar__jogo() {
+    window.location.reload()
+}
 
 function letra__repetida() {
     const aviso = document.querySelector(".letra-repetida")
