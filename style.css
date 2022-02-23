@@ -44,6 +44,8 @@ main {
 font-size: 45px;
 }
 
+
+.upper,
 .numero,
 .letra-repetida {
     background-color: rgba(255, 0, 0, 0.446);
@@ -53,12 +55,13 @@ font-size: 45px;
     bottom: -55px;
     transition: transform 0.3s ease-in-out;
 }
-
+.upper p,
 .numero p,
 .letra-repetida p {
     margin: 0;
 }
 
+.upper.show,
 .numero.show,
 .letra-repetida.show {
     transform: translateY(-50px);

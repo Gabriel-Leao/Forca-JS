@@ -3,7 +3,7 @@ const tecnologia = [
 ]
 
 const musica = [
-    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "anthrax", "misfits", "ledzeppelin", "eminem", "nwa",
+    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "anthrax", "misfits", "ledzeppelin", "cream", "megadeth",
 ]
 
 let tema = ""
@@ -41,6 +41,8 @@ document.addEventListener('keydown', (evento) =>{
             letras__erradas.push(letra)
             console.log(`lista de letras erradas ${letras__erradas}`)
         }
+    } else if (isUpper(ascii)){
+        upper()
     } else if (isnumber(ascii)){
         numero()
     }
@@ -115,9 +117,22 @@ function numero() {
     }, 1000)
 }
 
+function upper() {
+    const aviso = document.querySelector(".upper")
+    aviso.classList.add('show')
+    setTimeout(() => {
+        aviso.classList.remove('show')
+    }, 1000)
+}
+
 function isletra(ascii) {
     const letra = ascii.charCodeAt(0)
     return letra>= 97 && letra <= 122
+}
+
+function isUpper(ascii) {
+    const letra = ascii.charCodeAt(0)
+    return letra>= 65 && letra <= 90
 }
 
 function isnumber(ascii) {
