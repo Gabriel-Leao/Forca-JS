@@ -1,9 +1,9 @@
 const tecnologia = [
-    "python", "javascript", "java", "ruby", "swift", "node", "react", "linux", "popos", "ubuntu", "fedora", "android", "windows", "macos"
+    "python", "javascript", "java", "ruby", "swift", "smartphone", "xbox", "linux", "popos", "playstation", "pendrive", "android", "windows", "macos"
 ]
 
 const musica = [
-    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "anthrax", "misfits", "ledzeppelin", "cream", "megadeth",
+    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "darksideofthemoon", "revolver", "ledzeppelin", "cream", "megadeth",
 ]
 
 let tema = ""
@@ -13,10 +13,13 @@ const letras__corretas = []
 
 while (escolha != 1 || escolha != 2) {
     escolha = prompt("Escolha um tema: \n[1] tecnologia\n[2] música")
+    const subtittle = document.querySelector(".subtittle")
     if (escolha == 1) {
+        subtittle.innerHTML += " o tema é tecnologia, esse tema inclui:<br> Linguagens de programação, sistemas operacionais e dispositivos."
         tema = tecnologia
         break
     } else if (escolha == 2) {
+        subtittle.innerHTML += " o tema é música, esse tema inclui:<br> Bandas de rock e alguns albuns."
         tema = musica
         break
     } else {
