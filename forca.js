@@ -7,7 +7,7 @@ const musica = [
 ]
 
 const filmes = [
-    "forrestgump", "starwars", "osenhordosaneis", "laranjamecanica", "opoderosochefao", "cidadaokane", "afelicidadenaosecompra", "duna", "bladerunner", "apocalipsenow", "oresgatedosoldadoryan", "pumpfiction", "scarface", "tubarao", "amadeus", "eraumaveznooeste", "oiluminado", "bastardosinglorios", "easyrider", "devoltaparaofuturo",
+    "forrestgump", "starwars", "osenhordosaneis", "laranjamecanica", "opoderosochefao", "cidadaokane", "afelicidadenaosecompra", "ossetesamurais", "bladerunner", "apocalipsenow", "alien", "pumpfiction", "scarface", "tubarao", "psicose", "eraumaveznooeste", "oiluminado", "omagicodeoz", "easyrider", "devoltaparaofuturo",
 ]
 
 let tema = ""
@@ -16,7 +16,7 @@ const letras__erradas = []
 const letras__corretas = []
 
 while (escolha != 1 || escolha != 2) {
-    escolha = prompt("Escolha um tema: \n[1] tecnologia\n[2] música")
+    escolha = prompt("Escolha um tema: \n[1] tecnologia\n[2] música\n[3] filmes")
     const subtittle = document.querySelector(".subtittle")
     if (escolha == 1) {
         subtittle.innerHTML += " o tema é tecnologia, esse tema inclui:<br> Linguagens de programação, sistemas operacionais, dispositivos e empresas."
@@ -25,6 +25,10 @@ while (escolha != 1 || escolha != 2) {
     } else if (escolha == 2) {
         subtittle.innerHTML += " o tema é música, esse tema inclui:<br> Bandas de rock e alguns albuns."
         tema = musica
+        break
+    } else if (escolha == 3) {
+        subtittle.innerHTML += " o tema é filmes clássicos, esse tema inclui:<br> kubrick, scorcese, ridley scott, hitchcock, coppola..."
+        tema = filmes
         break
     } else {
         alert("Opção inválida! Tente novamente")
