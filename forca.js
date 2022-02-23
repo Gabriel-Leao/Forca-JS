@@ -99,7 +99,7 @@ function checar__jogo() {
     const certas = document.querySelector('.letras-certas')
     const partes__corpo = document.querySelectorAll(".partes-corpo")
     if (letras__erradas.length === partes__corpo.length) {
-        mensagem = "Fim de jogo! Vocẽ perdeeu!"
+        mensagem = "Fim de jogo! Vocẽ perdeu!"
     } else if (palavra === certas.innerText) {
         mensagem = "Parabéns! Você ganhou!"
     } if (mensagem) {
