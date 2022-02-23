@@ -1,9 +1,13 @@
 const tecnologia = [
-    "python", "javascript", "java", "ruby", "swift", "smartphone", "xbox", "linux", "popos", "playstation", "pendrive", "android", "windows", "macos"
+    "python", "javascript", "java", "ruby", "swift", "smartphone", "xbox", "linux", "popos", "playstation", "microsoft", "android", "windows", "macos", "canonical", "notebook", "apple", "alphabet", "meta", "ibm" 
 ]
 
 const musica = [
-    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "darksideofthemoon", "revolver", "ledzeppelin", "cream", "megadeth",
+    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "darksideofthemoon", "revolver", "ledzeppelin", "cream", "megadeth", "painkiller", "anthrax", "transformer", "paranoid", "theclash", "londoncalling"
+]
+
+const filmes = [
+    "forrestgump", "starwars", "osenhordosaneis", "laranjamecanica", "opoderosochefao", "cidadaokane", "afelicidadenaosecompra", "duna", "bladerunner", "apocalipsenow", "oresgatedosoldadoryan", "pumpfiction", "scarface", "tubarao", "amadeus", "eraumaveznooeste", "oiluminado", "bastardosinglorios", "easyrider", "devoltaparaofuturo",
 ]
 
 let tema = ""
@@ -15,7 +19,7 @@ while (escolha != 1 || escolha != 2) {
     escolha = prompt("Escolha um tema: \n[1] tecnologia\n[2] música")
     const subtittle = document.querySelector(".subtittle")
     if (escolha == 1) {
-        subtittle.innerHTML += " o tema é tecnologia, esse tema inclui:<br> Linguagens de programação, sistemas operacionais e dispositivos."
+        subtittle.innerHTML += " o tema é tecnologia, esse tema inclui:<br> Linguagens de programação, sistemas operacionais, dispositivos e empresas."
         tema = tecnologia
         break
     } else if (escolha == 2) {
