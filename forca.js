@@ -15,7 +15,7 @@ let escolha = 0
 const letras__erradas = []
 const letras__corretas = []
 
-while (escolha != 1 || escolha != 2) {
+while (escolha != 1 || escolha != 2 || escolha != 3) {
     escolha = prompt("Escolha um tema: \n[1] tecnologia\n[2] música\n[3] filmes")
     const subtittle = document.querySelector(".subtittle")
     if (escolha == 1) {
@@ -31,7 +31,7 @@ while (escolha != 1 || escolha != 2) {
         tema = filmes
         break
     } else {
-        alert("Opção inválida! Tente novamente")
+        alert("Opção inválida! Tente novamente.")
         continue
     }
 }
