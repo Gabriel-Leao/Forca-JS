@@ -10,8 +10,8 @@ const filmes = [
     "forrestgump", "starwars", "osenhordosaneis", "laranjamecanica", "opoderosochefao", "cidadaokane", "afelicidadenaosecompra", "ossetesamurais", "bladerunner", "apocalipsenow", "alien", "pumpfiction", "scarface", "tubarao", "psicose", "eraumaveznooeste", "oiluminado", "omagicodeoz", "easyrider", "devoltaparaofuturo",
 ]
 
-let tema = ""
-let escolha = 0
+let tema
+let escolha
 const letras__erradas = []
 const letras__corretas = []
 
