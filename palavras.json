@@ -1,0 +1,10 @@
+{ "tecnologia" : [
+    "python", "javascript", "java", "ruby", "swift", "smartphone", "xbox", "linux", "popos", "playstation", "microsoft", "android", "windows", "macos", "canonical", "notebook", "apple", "alphabet", "meta", "ibm" 
+],
+"musica" : [
+    "beatles", "pantera", "blacksabbath", "metallica", "ufo", "motorhead", "rainbow", "mutantes", "slayer", "darksideofthemoon", "revolver", "ledzeppelin", "cream", "megadeth", "painkiller", "anthrax", "transformer", "paranoid", "theclash", "londoncalling"
+],  
+"filmes": [
+    "forrestgump", "starwars", "osenhordosaneis", "laranjamecanica", "opoderosochefao", "cidadaokane", "afelicidadenaosecompra", "ossetesamurais", "bladerunner", "apocalipsenow", "alien", "pumpfiction", "scarface", "tubarao", "psicose", "eraumaveznooeste", "oiluminado", "omagicodeoz", "easyrider", "devoltaparaofuturo"
+]
+}
