@@ -137,8 +137,8 @@ function jogo() {
     function isnumber(ascii) {
         const letra = ascii.charCodeAt(0)
         return letra>= 48 && letra <= 57
-    }    
-}   
+    }
+}
 function reiniciar__jogo() {
     window.location.reload()
 }
