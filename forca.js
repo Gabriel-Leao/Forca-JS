@@ -98,8 +98,6 @@ function jogo() {
         }
     }
 
-
-
     function letra__repetida() {
         const aviso = document.querySelector(".letra-repetida")
         aviso.classList.add('show')
@@ -139,6 +137,7 @@ function jogo() {
         return letra>= 48 && letra <= 57
     }
 }
+
 function reiniciar__jogo() {
     window.location.reload()
 }
