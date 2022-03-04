@@ -95,6 +95,7 @@ function jogo() {
         } if (mensagem) {
             document.querySelector('#mensagem').innerHTML = mensagem
             document.querySelector('.popup-container').style.display = "flex"
+            document.querySelector('#btn-jogar').focus();
         }
     }
 
